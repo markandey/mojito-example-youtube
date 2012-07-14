@@ -1,0 +1,30 @@
+[
+    {
+        "settings": [ "master" ],
+        "specs": {
+                "html": {
+                        "type": "HTMLFrameMojit",
+                        "config": {
+                            "title": "Hello ",
+                            "deploy":true,
+                            "child": {
+                                "type": "containerMojit",
+                                "config": {
+                                                        "children": {
+                                                            "search": {
+                                                                "type": "searchResultMojit"
+                                                            }
+                                                        }
+                                         }
+                            }
+                        }
+                    }
+        }
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]
